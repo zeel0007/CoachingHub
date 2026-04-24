@@ -101,9 +101,16 @@ function Navbar() {
             {user ? (
               <div className="px-3 flex justify-between items-center">
                 <span className="text-base font-medium text-gray-800">{user.name}</span>
-                <button onClick={() => { logout(); setIsOpen(false); }} className="text-red-600 font-medium">
-                  Logout
-                </button>
+                <div className="flex gap-4">
+                  {user.role === 'admin' && (
+                    <Link to="/admin" onClick={() => setIsOpen(false)} className="text-red-600 font-medium bg-red-50 px-2 py-1 rounded">
+                      Dashboard
+                    </Link>
+                  )}
+                  <button onClick={() => { logout(); setIsOpen(false); }} className="text-gray-500 font-medium">
+                    Logout
+                  </button>
+                </div>
               </div>
             ) : (
               <Link
