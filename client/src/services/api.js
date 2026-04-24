@@ -11,7 +11,7 @@ import quizData  from '../data/quiz.json';
 import jobsData  from '../data/jobs.json';
 import pyqsData  from '../data/pyqs.json';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || '/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://coachinghub.onrender.com/api';
 
 // ── Axios Instance ─────────────────────────────────────────
 const api = axios.create({
