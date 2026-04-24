@@ -1,0 +1,264 @@
+[
+  {
+    "id": "agriculture",
+    "category": "Agriculture",
+    "icon": "🌾",
+    "color": "#16a34a",
+    "topics": [
+      {
+        "id": "agri-1",
+        "title": "Gujarat Agriculture Overview",
+        "content": "Gujarat is one of India's leading agricultural states. Major crops include cotton (white gold), groundnut, wheat, and bajra. The state contributes significantly to India's cotton and oilseed production.",
+        "keyPoints": [
+          "Gujarat accounts for ~30% of India's cotton production",
+          "Groundnut is the major kharif oilseed crop",
+          "Major rivers: Narmada, Sabarmati, Tapi irrigate farmlands",
+          "Sardar Sarovar Dam provides water to 18 lakh hectares",
+          "Bt Cotton was first commercially released in India in Gujarat (2002)"
+        ]
+      },
+      {
+        "id": "agri-2",
+        "title": "Crop Seasons (Kharif, Rabi, Zaid)",
+        "content": "Indian agriculture follows three main crop seasons based on monsoon patterns.",
+        "keyPoints": [
+          "Kharif (Jun-Nov): Cotton, Groundnut, Bajra, Jowar, Rice",
+          "Rabi (Nov-Apr): Wheat, Mustard, Gram, Barley",
+          "Zaid (Apr-Jun): Watermelon, Cucumber, Sunflower",
+          "Gujarat's main Kharif crops: Cotton, Groundnut, Maize",
+          "Gujarat's main Rabi crops: Wheat, Chickpea, Potato"
+        ]
+      },
+      {
+        "id": "agri-3",
+        "title": "Soil Types in Gujarat",
+        "content": "Gujarat has diverse soil types suitable for various crops.",
+        "keyPoints": [
+          "Black soil (Regur): Best for cotton, found in Saurashtra",
+          "Alluvial soil: Found near river banks, highly fertile",
+          "Sandy soil: Found in Kutch, suitable for drought-resistant crops",
+          "Red soil: Found in Chhota Udaipur area",
+          "Laterite soil: Found in hilly regions of Gujarat"
+        ]
+      },
+      {
+        "id": "agri-4",
+        "title": "Agricultural Schemes & Programs",
+        "content": "Government schemes for farmers in Gujarat.",
+        "keyPoints": [
+          "PM-KISAN: ₹6000/year direct income support to farmers",
+          "Mukhyamantri Kisan Sahay Yojana: Crop insurance scheme by Gujarat",
+          "Pradhan Mantri Fasal Bima Yojana (PMFBY): National crop insurance",
+          "Kisan Credit Card (KCC): Easy credit for farmers",
+          "Soil Health Card Scheme: Free soil testing for farmers"
+        ]
+      },
+      {
+        "id": "agri-5",
+        "title": "Animal Husbandry & Dairy",
+        "content": "Gujarat is famous for its dairy cooperative movement.",
+        "keyPoints": [
+          "AMUL (Anand Milk Union Ltd.) — world's largest dairy cooperative",
+          "Operation Flood: White Revolution led by Dr. Verghese Kurien",
+          "Major cattle breeds: Gir, Kankrej, Dangi",
+          "Gujarat ranks high in milk production in India",
+          "National Dairy Development Board (NDDB) headquartered in Anand, Gujarat"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gk-gujarat",
+    "category": "GK (Gujarat)",
+    "icon": "🏛️",
+    "color": "#d97706",
+    "topics": [
+      {
+        "id": "gk-1",
+        "title": "Gujarat — Basic Facts",
+        "content": "Essential facts about Gujarat state.",
+        "keyPoints": [
+          "Official Name: Republic of India, State of Gujarat",
+          "Formation Date: 1 May 1960 (Bifurcation from Bombay State)",
+          "Capital: Gandhinagar | Largest City: Ahmedabad",
+          "Chief Minister: Bhupendrabhai Patel | Governor: Acharya Devvrat",
+          "Districts: 33 | Area: 1,96,024 sq km (7th largest state)",
+          "Population: ~6.04 crore (2011 census) | Literacy: 78.03%"
+        ]
+      },
+      {
+        "id": "gk-2",
+        "title": "Historical Events & Heritage",
+        "content": "Key historical milestones related to Gujarat.",
+        "keyPoints": [
+          "Harappan Civilization sites: Lothal, Dholavira (Kutch)",
+          "Somnath Temple: 12 Jyotirlingas, rebuilt multiple times",
+          "Champaner-Pavagadh: UNESCO World Heritage Site",
+          "Dandi March (1930): Gandhi's Salt March started from Sabarmati",
+          "Rani ki Vav (Patan): UNESCO World Heritage Site, built in 11th century",
+          "Modhera Sun Temple: Built by Bhimdev-I in 1026 AD"
+        ]
+      },
+      {
+        "id": "gk-3",
+        "title": "Important Places & Tourism",
+        "content": "Major tourist and important places in Gujarat.",
+        "keyPoints": [
+          "Gir Forest: Only wild Asiatic Lion habitat in world",
+          "Rann of Kutch: Largest salt desert in world",
+          "Statue of Unity: World's tallest statue (182m) — Sardar Patel",
+          "Sabarmati Ashram: Gandhi's residence in Ahmedabad",
+          "Marine National Park: First in India, located in Gulf of Kutch",
+          "Dwarka: One of the Char Dham pilgrimage sites"
+        ]
+      },
+      {
+        "id": "gk-4",
+        "title": "Gujarat Government Structure",
+        "content": "Administrative structure of Gujarat.",
+        "keyPoints": [
+          "Legislature: Unicameral — Gujarat Vidhan Sabha (182 seats)",
+          "High Court: Gujarat High Court at Ahmedabad",
+          "Rajya Sabha seats: 11 | Lok Sabha seats: 26",
+          "Gram Panchayat: Smallest unit of rural local governance",
+          "Gram Sevak: Government employee serving at village level",
+          "GPSC: Gujarat Public Service Commission — conducts recruitment exams"
+        ]
+      },
+      {
+        "id": "gk-5",
+        "title": "Economy & Industries",
+        "content": "Economic overview of Gujarat.",
+        "keyPoints": [
+          "Gujarat contributes ~8% to India's GDP",
+          "Known as 'Manchester of India' for textile industry (Surat, Ahmedabad)",
+          "Largest producer of salt in India (Little Rann of Kutch)",
+          "Diamond cutting & polishing: Surat processes 80% of world's diamonds",
+          "GIFT City: India's first operational smart city and IFSC",
+          "Major ports: Kandla, Mundra, Pipavav — highest cargo traffic state"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gujarati",
+    "category": "Gujarati",
+    "icon": "📝",
+    "color": "#7c3aed",
+    "topics": [
+      {
+        "id": "guj-1",
+        "title": "Gujarati Vyakaran (Grammar) Basics",
+        "content": "Basic Gujarati grammar concepts.",
+        "keyPoints": [
+          "Gujarati is an Indo-Aryan language, derived from Sanskrit",
+          "Gujarati script has 13 vowels (સ્વર) and 36 consonants (વ્યંજન)",
+          "Nouns have 3 genders: masculine (પુ.), feminine (સ્ત્રी.), and neuter (નપ.)",
+          "Verb tenses: Present (વર્તમાન), Past (ભૂતકાળ), Future (ભવિષ્ય)",
+          "Sandhi: Joining of words/syllables — an important grammar concept"
+        ]
+      },
+      {
+        "id": "guj-2",
+        "title": "Gujarati Literature & Poets",
+        "content": "Important Gujarati literary figures.",
+        "keyPoints": [
+          "Narsinh Mehta: 'Aadikavi' of Gujarati literature — Vaishnav Jan To",
+          "Mirabai: Medieval poet-saint, devotee of Lord Krishna",
+          "Dayaram: Composed 'Garbi' poetry in Haveli Sangeet tradition",
+          "Jhaverchand Meghani: 'Rashtreeya Shayar' — national bard of Gujarat",
+          "Pannalal Patel: Ranjitram Award winner, wrote 'Manavini Bhavai'",
+          "Suresh Joshi: Founder of Gujarati modernism movement"
+        ]
+      },
+      {
+        "id": "guj-3",
+        "title": "Muhavara & Kahevat (Idioms & Proverbs)",
+        "content": "Common Gujarati idioms and proverbs used in exams.",
+        "keyPoints": [
+          "જ્યાં દૂઝ, ત્યાં ડૂઝ — Where there is milk, there are flies (prosperity attracts people)",
+          "ઊગ્યો સૂરજ ઊઘડ્યો — Rise with the sun (work hard from the start)",
+          "ગળ્યા ઘૂને ઝેર — Sweet words may hide poison",
+          "ઘર ઘર ની ગઝ — Every house has its own problems",
+          "Muhavara: Phrases with figurative meaning, differ from literal translation"
+        ]
+      },
+      {
+        "id": "guj-4",
+        "title": "Nibandh (Essay Writing) Tips",
+        "content": "How to write good Gujarati essays for exams.",
+        "keyPoints": [
+          "Introduction (પ્રસ્તાવના): Introduce the topic with a quote or fact",
+          "Body (વિષય-વિસ્તાર): Explain the topic in 3-4 paragraphs",
+          "Conclusion (ઉપસંહાર): Summarize and give your viewpoint",
+          "Use simple, clear Gujarati — avoid mixing too many English words",
+          "Common topics: Paryavaran, Swachh Bharat, Atmanirbhar Bharat, Digital India"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "english",
+    "category": "English",
+    "icon": "🔤",
+    "color": "#0891b2",
+    "topics": [
+      {
+        "id": "eng-1",
+        "title": "Parts of Speech",
+        "content": "The 8 main parts of speech in English grammar.",
+        "keyPoints": [
+          "Noun: Name of a person, place, thing (e.g., Gujarat, farmer, water)",
+          "Pronoun: Replaces a noun (e.g., he, she, it, they)",
+          "Verb: Action or state (e.g., run, is, write)",
+          "Adjective: Describes a noun (e.g., green, large, beautiful)",
+          "Adverb: Modifies verb/adjective (e.g., quickly, very, well)",
+          "Preposition: Shows relationship (e.g., in, on, at, with)",
+          "Conjunction: Joins words/clauses (e.g., and, but, or, because)",
+          "Interjection: Exclamations (e.g., Oh!, Wow!, Alas!)"
+        ]
+      },
+      {
+        "id": "eng-2",
+        "title": "Tenses — Quick Reference",
+        "content": "English tenses explained simply.",
+        "keyPoints": [
+          "Simple Present: I write / He writes (habit/fact)",
+          "Present Continuous: I am writing (action happening now)",
+          "Simple Past: I wrote (completed action)",
+          "Past Continuous: I was writing (ongoing past action)",
+          "Simple Future: I will write (future action)",
+          "Present Perfect: I have written (recently completed)",
+          "Past Perfect: I had written (completed before another past action)"
+        ]
+      },
+      {
+        "id": "eng-3",
+        "title": "Synonyms & Antonyms (Common Words)",
+        "content": "Important vocabulary for competitive exams.",
+        "keyPoints": [
+          "Brave → Synonym: Courageous | Antonym: Cowardly",
+          "Ancient → Synonym: Old | Antonym: Modern/New",
+          "Abundant → Synonym: Plentiful | Antonym: Scarce",
+          "Benevolent → Synonym: Kind | Antonym: Cruel",
+          "Diligent → Synonym: Hardworking | Antonym: Lazy",
+          "Transparent → Synonym: Clear | Antonym: Opaque"
+        ]
+      },
+      {
+        "id": "eng-4",
+        "title": "One Word Substitutions",
+        "content": "Single words that replace descriptive phrases — common in exams.",
+        "keyPoints": [
+          "Omnivore: One who eats both plants and animals",
+          "Bibliophile: One who loves books",
+          "Philatelist: One who collects stamps",
+          "Omniscient: One who knows everything",
+          "Ambidextrous: One who can use both hands equally",
+          "Insolvent: One who cannot pay debts (bankrupt)",
+          "Posthumous: Occurring after death"
+        ]
+      }
+    ]
+  }
+]

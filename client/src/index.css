@@ -1,0 +1,129 @@
+/* ============================================================
+   src/index.css — Global Styles
+   Base Tailwind directives + custom global overrides
+   ============================================================ */
+
+/* Pull in Tailwind's base, component, and utility classes */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Custom Properties ─────────────────────────────── */
+:root {
+  --color-primary: #16a34a;
+  --color-primary-dark: #14532d;
+  --color-accent: #eab308;
+  --color-bg: #f9fafb;
+  --color-text: #111827;
+  --color-text-muted: #6b7280;
+  --radius-card: 16px;
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 8px 30px rgba(22, 163, 74, 0.2);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Base Resets ───────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Custom Scrollbar ──────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #16a34a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #15803d;
+}
+
+/* ─── Reusable Component Classes ────────────────────────── */
+@layer components {
+  /* Cards */
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 transition-all duration-300;
+  }
+  .card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+  }
+
+  /* Primary Button */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white rounded-xl font-semibold
+           hover:bg-primary-700 active:scale-95 transition-all duration-200 shadow-sm;
+  }
+
+  /* Secondary/Outline Button */
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 border-2 border-primary-600 text-primary-700 rounded-xl
+           font-semibold hover:bg-primary-50 active:scale-95 transition-all duration-200;
+  }
+
+  /* Badge/Tag */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+  }
+
+  /* Section Container */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section Heading */
+  .section-title {
+    @apply text-3xl font-display font-bold text-gray-900;
+  }
+
+  /* Input field */
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900
+           focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-100
+           transition-all duration-200 placeholder-gray-400;
+  }
+}
+
+/* ─── Utility Overrides ─────────────────────────────────── */
+.font-display {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Page-level animation */
+.page-enter {
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Highlight answer option */
+.option-correct {
+  @apply bg-green-50 border-green-500 text-green-800;
+}
+.option-wrong {
+  @apply bg-red-50 border-red-400 text-red-800;
+}
+.option-selected {
+  @apply bg-primary-50 border-primary-500;
+}

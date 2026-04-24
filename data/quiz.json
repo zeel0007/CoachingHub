@@ -1,0 +1,316 @@
+[
+  {
+    "id": "quiz-1",
+    "category": "Agriculture",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which crop is known as 'White Gold' in Gujarat?",
+        "options": ["Wheat", "Cotton", "Sugar Cane", "Rice"],
+        "answer": 1,
+        "explanation": "Cotton is called 'White Gold' because of its white fluffy appearance and high economic value. Gujarat is India's largest cotton producer."
+      },
+      {
+        "id": "q2",
+        "question": "What is the headquarters of National Dairy Development Board (NDDB)?",
+        "options": ["Ahmedabad", "Anand", "Surat", "Vadodara"],
+        "answer": 1,
+        "explanation": "NDDB is headquartered in Anand, Gujarat — the birthplace of the cooperative dairy movement in India."
+      },
+      {
+        "id": "q3",
+        "question": "Which scheme provides ₹6000/year directly to farmers?",
+        "options": ["PMFBY", "KCC", "PM-KISAN", "RKVY"],
+        "answer": 2,
+        "explanation": "PM-KISAN (Pradhan Mantri Kisan Samman Nidhi) provides ₹6000 per year in 3 installments directly to eligible farmer families."
+      },
+      {
+        "id": "q4",
+        "question": "Bt Cotton was first commercially released in India in which year?",
+        "options": ["1998", "2000", "2002", "2005"],
+        "answer": 2,
+        "explanation": "Bt Cotton was first commercially approved and released in India in 2002, primarily in Gujarat, Maharashtra, and Andhra Pradesh."
+      },
+      {
+        "id": "q5",
+        "question": "Which soil type is best for cotton cultivation?",
+        "options": ["Red Soil", "Sandy Soil", "Black Soil (Regur)", "Alluvial Soil"],
+        "answer": 2,
+        "explanation": "Black soil (Regur soil) is ideal for cotton as it retains moisture well and is rich in calcium carbonate, making it highly suitable."
+      },
+      {
+        "id": "q6",
+        "question": "Kharif crops in Gujarat are sown during which period?",
+        "options": ["November to April", "June to November", "April to June", "January to March"],
+        "answer": 1,
+        "explanation": "Kharif crops are sown at the beginning of the monsoon (June) and harvested after the monsoon ends (November). E.g., cotton, groundnut, bajra."
+      },
+      {
+        "id": "q7",
+        "question": "AMUL cooperative is located in which city of Gujarat?",
+        "options": ["Surat", "Nadiad", "Anand", "Rajkot"],
+        "answer": 2,
+        "explanation": "AMUL (Anand Milk Union Limited) is based in Anand, Gujarat. It was founded in 1946 and is managed by Gujarat Cooperative Milk Marketing Federation (GCMMF)."
+      },
+      {
+        "id": "q8",
+        "question": "Which is the major kharif oilseed crop of Gujarat?",
+        "options": ["Mustard", "Soybean", "Groundnut", "Sunflower"],
+        "answer": 2,
+        "explanation": "Groundnut (moongfali) is the major kharif oilseed crop in Gujarat. Gujarat produces around 40% of India's groundnut."
+      },
+      {
+        "id": "q9",
+        "question": "The Sardar Sarovar Dam provides irrigation to approximately how many hectares?",
+        "options": ["5 lakh hectares", "10 lakh hectares", "18 lakh hectares", "25 lakh hectares"],
+        "answer": 2,
+        "explanation": "The Sardar Sarovar Dam on the Narmada River is designed to irrigate approximately 18 lakh (1.8 million) hectares of land in Gujarat."
+      },
+      {
+        "id": "q10",
+        "question": "Which cattle breed is native to Gujarat?",
+        "options": ["Sahiwal", "Gir", "Red Sindhi", "Tharparkar"],
+        "answer": 1,
+        "explanation": "Gir is a famous indigenous cattle breed from the Gir forest region of Gujarat. It is known for high milk yield and is also found in Brazil."
+      }
+    ]
+  },
+  {
+    "id": "quiz-2",
+    "category": "GK Gujarat",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Gujarat was formed on which date?",
+        "options": ["15 August 1947", "26 January 1950", "1 May 1960", "1 November 1956"],
+        "answer": 2,
+        "explanation": "Gujarat was carved out from the bilingual Bombay State on 1 May 1960 based on the linguistic reorganization of states. 1 May is celebrated as Gujarat Day."
+      },
+      {
+        "id": "q2",
+        "question": "What is the capital city of Gujarat?",
+        "options": ["Ahmedabad", "Surat", "Gandhinagar", "Vadodara"],
+        "answer": 2,
+        "explanation": "Gandhinagar is the capital of Gujarat, named after Mahatma Gandhi. It is one of India's planned cities and houses the state government offices."
+      },
+      {
+        "id": "q3",
+        "question": "The Statue of Unity depicts which leader?",
+        "options": ["Mahatma Gandhi", "Sardar Vallabhbhai Patel", "Jawaharlal Nehru", "Subhas Chandra Bose"],
+        "answer": 1,
+        "explanation": "The Statue of Unity (182m tall) is a monument to Sardar Vallabhbhai Patel, located near Kevadia, Gujarat. It is the world's tallest statue."
+      },
+      {
+        "id": "q4",
+        "question": "Dholavira, a Harappan site, is located in which district of Gujarat?",
+        "options": ["Junagadh", "Kutch", "Rajkot", "Patan"],
+        "answer": 1,
+        "explanation": "Dholavira is located on Khadir Island in the Rann of Kutch, Kutch district. It is one of the five largest Harappan cities and a UNESCO World Heritage Site."
+      },
+      {
+        "id": "q5",
+        "question": "Rani ki Vav (stepwell) is located in which city of Gujarat?",
+        "options": ["Modhera", "Patan", "Vadodara", "Champaner"],
+        "answer": 1,
+        "explanation": "Rani ki Vav is a UNESCO World Heritage Site located in Patan, Gujarat. It was built in the 11th century by Queen Udayamati in memory of her husband King Bhimdev I."
+      },
+      {
+        "id": "q6",
+        "question": "How many Lok Sabha seats does Gujarat have?",
+        "options": ["19", "22", "26", "30"],
+        "answer": 2,
+        "explanation": "Gujarat has 26 Lok Sabha (Parliamentary) constituencies. In Rajya Sabha, Gujarat has 11 seats."
+      },
+      {
+        "id": "q7",
+        "question": "Surat city is famous for which industry?",
+        "options": ["Salt production", "Diamond cutting & textile", "Petroleum refining", "Shipbuilding"],
+        "answer": 1,
+        "explanation": "Surat is world-famous for diamond cutting and polishing (processes ~80% of world's diamonds) and is also a major textile hub, known as the 'Silk City'."
+      },
+      {
+        "id": "q8",
+        "question": "Gir National Park is the only habitat for which animal?",
+        "options": ["Bengal Tiger", "One-horned Rhinoceros", "Asiatic Lion", "Snow Leopard"],
+        "answer": 2,
+        "explanation": "Gir National Park in Gujarat is the world's only natural habitat of the Asiatic Lion (Panthera leo persica). The lion population has significantly increased due to conservation efforts."
+      },
+      {
+        "id": "q9",
+        "question": "Mahatma Gandhi's Dandi March (1930) started from which place?",
+        "options": ["Porbandar", "Sabarmati Ashram (Ahmedabad)", "Rajkot", "Dandi"],
+        "answer": 1,
+        "explanation": "Gandhi began the Dandi March on 12 March 1930 from Sabarmati Ashram in Ahmedabad, walking 240 miles to the coastal village of Dandi to protest the British salt tax."
+      },
+      {
+        "id": "q10",
+        "question": "GIFT City (Gujarat International Finance Tec-City) is located near which city?",
+        "options": ["Surat", "Gandhinagar", "Ahmedabad", "Anand"],
+        "answer": 1,
+        "explanation": "GIFT City is located between Ahmedabad and Gandhinagar. It is India's first operational smart city and International Financial Services Centre (IFSC)."
+      }
+    ]
+  },
+  {
+    "id": "quiz-3",
+    "category": "Gujarati Language",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Who is considered the 'Aadikavi' (first poet) of Gujarati literature?",
+        "options": ["Dayaram", "Jhaverchand Meghani", "Narsinh Mehta", "Pannalal Patel"],
+        "answer": 2,
+        "explanation": "Narsinh Mehta (1414–1481) is considered the 'Aadikavi' (father of Gujarati poetry). His famous bhajan 'Vaishnav Jan To' was Mahatma Gandhi's favourite."
+      },
+      {
+        "id": "q2",
+        "question": "How many vowels (સ્વર) are there in Gujarati script?",
+        "options": ["11", "12", "13", "14"],
+        "answer": 2,
+        "explanation": "Gujarati script has 13 vowels (svar) and 36 consonants (vyanjan). It is derived from the Devanagari script but does not have the horizontal bar on top."
+      },
+      {
+        "id": "q3",
+        "question": "Jhaverchand Meghani is known by which title?",
+        "options": ["Kavi Shreshtha", "Rashtreeya Shayar", "Maha Kavi", "Kavya Guru"],
+        "answer": 1,
+        "explanation": "Jhaverchand Meghani (1896–1947) is called the 'Rashtreeya Shayar' (National Poet) of Gujarat. He was awarded the Ranjitram Suvarna Chandrak."
+      },
+      {
+        "id": "q4",
+        "question": "Which language family does Gujarati belong to?",
+        "options": ["Dravidian", "Sino-Tibetan", "Indo-Aryan", "Austro-Asiatic"],
+        "answer": 2,
+        "explanation": "Gujarati belongs to the Indo-Aryan branch of the Indo-European language family. It evolved from Sanskrit through Prakrit and Apabhramsha."
+      },
+      {
+        "id": "q5",
+        "question": "Pannalal Patel's famous novel 'Manavini Bhavai' is set in which period?",
+        "options": ["Freedom struggle era", "Drought famine period", "British colonial era", "Partition era"],
+        "answer": 1,
+        "explanation": "Manavini Bhavai by Pannalal Patel depicts the lives of Gujarati rural people during the devastating drought (duria) period. It won the Sahitya Akademi Award in 1985."
+      },
+      {
+        "id": "q6",
+        "question": "How many genders does Gujarati language have?",
+        "options": ["1", "2", "3", "4"],
+        "answer": 2,
+        "explanation": "Gujarati has 3 grammatical genders: Masculine (Pulling - પુ.), Feminine (Striling - સ્ત્રી.), and Neuter (Napunsak - નપ.). This is similar to Sanskrit."
+      },
+      {
+        "id": "q7",
+        "question": "Which of these is a Kharif crop?",
+        "options": ["Wheat", "Barley", "Gram", "Bajra"],
+        "answer": 3,
+        "explanation": "Bajra (Pearl Millet) is a Kharif crop grown during June-November. Wheat, Barley, and Gram are Rabi crops grown during November-April."
+      },
+      {
+        "id": "q8",
+        "question": "The Gujarati word 'Gram Sevak' means?",
+        "options": ["Village Head", "Village Servant/Worker", "Village Elder", "Revenue Officer"],
+        "answer": 1,
+        "explanation": "Gram Sevak literally means 'Village Servant/Worker'. A Gram Sevak is a government employee responsible for implementing development schemes at the village level."
+      },
+      {
+        "id": "q9",
+        "question": "Which award is given to distinguished Gujarati literature?",
+        "options": ["Booker Prize", "Ranjitram Suvarna Chandrak", "Sahitya Ratna", "Kavya Bhushan"],
+        "answer": 1,
+        "explanation": "The Ranjitram Suvarna Chandrak is the highest literary award in Gujarat, given to distinguished Gujarati writers. It is named after Ranjitram Vavabhai Mehta."
+      },
+      {
+        "id": "q10",
+        "question": "'Vaishnav Jan To' was composed by which poet-saint?",
+        "options": ["Mirabai", "Dayaram", "Narsinh Mehta", "Kabir"],
+        "answer": 2,
+        "explanation": "Vaishnav Jan To Tene Kahiye Jo Peed Parayi Jane Re was composed by Narsinh Mehta. This bhajan defines a true Vaishnav (devotee of Vishnu) as one who feels others' pain."
+      }
+    ]
+  },
+  {
+    "id": "quiz-4",
+    "category": "English",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which sentence is grammatically correct?",
+        "options": [
+          "She don't know the answer.",
+          "She doesn't knows the answer.",
+          "She doesn't know the answer.",
+          "She not know the answer."
+        ],
+        "answer": 2,
+        "explanation": "With third person singular (she/he/it), use 'doesn't' + base verb. 'She doesn't know' is the correct form."
+      },
+      {
+        "id": "q2",
+        "question": "What is the synonym of 'Diligent'?",
+        "options": ["Lazy", "Hardworking", "Careless", "Slow"],
+        "answer": 1,
+        "explanation": "Diligent means careful and persistent in work. Its synonym is Hardworking/Industrious. Its antonym is Lazy/Indolent."
+      },
+      {
+        "id": "q3",
+        "question": "One Word Substitution: 'One who loves books'?",
+        "options": ["Bibliophobe", "Bibliophile", "Philatelist", "Ornithologist"],
+        "answer": 1,
+        "explanation": "Bibliophile means a person who collects or loves books. Philatelist = stamp collector, Ornithologist = bird scientist."
+      },
+      {
+        "id": "q4",
+        "question": "Which tense is used in: 'I have completed my homework'?",
+        "options": ["Simple Past", "Past Perfect", "Present Perfect", "Present Continuous"],
+        "answer": 2,
+        "explanation": "Present Perfect Tense = have/has + past participle. It indicates a recently completed action that has relevance to the present."
+      },
+      {
+        "id": "q5",
+        "question": "Identify the preposition: 'The book is ON the table.'",
+        "options": ["book", "is", "on", "table"],
+        "answer": 2,
+        "explanation": "A preposition shows the relationship between a noun/pronoun and another word. 'On' shows the position of the book relative to the table."
+      },
+      {
+        "id": "q6",
+        "question": "What does 'Omniscient' mean?",
+        "options": ["One who eats everything", "One who knows everything", "One who sees everything", "One who runs everywhere"],
+        "answer": 1,
+        "explanation": "Omniscient = Omni (all) + scient (knowing). It means knowing everything. God is often described as omniscient. Omnivore = eats all, Omnipotent = all powerful."
+      },
+      {
+        "id": "q7",
+        "question": "Antonym of 'Benevolent' is?",
+        "options": ["Generous", "Kind", "Malevolent", "Helpful"],
+        "answer": 2,
+        "explanation": "Benevolent means kind and generous. Its antonym is Malevolent (having or showing a wish to do evil). Both come from the Latin 'velle' (to wish)."
+      },
+      {
+        "id": "q8",
+        "question": "Choose the correct passive voice: 'The farmer plows the field.'",
+        "options": [
+          "The field is plowed by the farmer.",
+          "The field was plowed by the farmer.",
+          "The field had been plowed by the farmer.",
+          "The field plowed by the farmer."
+        ],
+        "answer": 0,
+        "explanation": "Active: Subject + Verb + Object. Passive: Object + is/are + past participle + by + Subject. Present tense uses 'is/are' in passive."
+      },
+      {
+        "id": "q9",
+        "question": "Which is a conjunction in: 'He is poor but honest'?",
+        "options": ["He", "is", "poor", "but"],
+        "answer": 3,
+        "explanation": "A Conjunction joins words or clauses. 'But' is a coordinating conjunction showing contrast between 'poor' and 'honest'. Other conjunctions: and, or, nor, yet, so, for."
+      },
+      {
+        "id": "q10",
+        "question": "Find the correct spelling:",
+        "options": ["Acommodation", "Accommodation", "Accomodation", "Accommodasion"],
+        "answer": 1,
+        "explanation": "The correct spelling is 'Accommodation' — with double 'c' and double 'm'. It's one of the most commonly misspelled words in English."
+      }
+    ]
+  }
+]

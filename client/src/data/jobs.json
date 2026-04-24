@@ -1,0 +1,74 @@
+[
+  {
+    "id": "job-1",
+    "title": "GPSC Class 1-2 Officer Recruitment 2024",
+    "department": "Gujarat Public Service Commission",
+    "posts": 345,
+    "lastDate": "2024-08-15",
+    "salary": "₹67,700 - ₹2,08,700",
+    "eligibility": "Graduation from recognized university",
+    "applyLink": "https://gpsc.gujarat.gov.in",
+    "status": "Active",
+    "category": "State Service"
+  },
+  {
+    "id": "job-2",
+    "title": "Gram Sevak (VSO) Recruitment 2024",
+    "department": "Gujarat Panchayat Service Selection Board",
+    "posts": 5000,
+    "lastDate": "2024-09-30",
+    "salary": "₹19,900 - ₹63,200",
+    "eligibility": "12th pass + Diploma in Agriculture",
+    "applyLink": "https://gpssb.gujarat.gov.in",
+    "status": "Active",
+    "category": "Panchayat"
+  },
+  {
+    "id": "job-3",
+    "title": "Gujarat Police Constable Recruitment 2024",
+    "department": "Gujarat Police",
+    "posts": 12000,
+    "lastDate": "2024-10-20",
+    "salary": "₹19,900 - ₹63,200",
+    "eligibility": "12th pass, age 18-33 years",
+    "applyLink": "https://ojas.gujarat.gov.in",
+    "status": "Active",
+    "category": "Police"
+  },
+  {
+    "id": "job-4",
+    "title": "Revenue Talati Recruitment 2024",
+    "department": "Gujarat Revenue Department",
+    "posts": 3437,
+    "lastDate": "2024-07-31",
+    "salary": "₹19,900 - ₹63,200",
+    "eligibility": "Graduation required, Computer knowledge",
+    "applyLink": "https://ojas.gujarat.gov.in",
+    "status": "Closed",
+    "category": "Revenue"
+  },
+  {
+    "id": "job-5",
+    "title": "Gujarat High Court Clerk Recruitment 2024",
+    "department": "Gujarat High Court",
+    "posts": 1081,
+    "lastDate": "2024-11-15",
+    "salary": "₹25,500 - ₹81,100",
+    "eligibility": "Graduation + Computer proficiency",
+    "applyLink": "https://hc-ojas.gujarat.gov.in",
+    "status": "Active",
+    "category": "Judiciary"
+  },
+  {
+    "id": "job-6",
+    "title": "AAAS (Agriculture Assistant) Recruitment 2024",
+    "department": "Agriculture Dept, Gujarat",
+    "posts": 889,
+    "lastDate": "2024-08-30",
+    "salary": "₹19,900 - ₹63,200",
+    "eligibility": "B.Sc Agriculture required",
+    "applyLink": "https://gpssb.gujarat.gov.in",
+    "status": "Active",
+    "category": "Agriculture"
+  }
+]
