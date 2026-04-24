@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getPYQs, createPYQ, deletePYQ, updatePYQ } from '../../services/api';
-import { FileDown, Plus, Trash2, Edit2 } from 'lucide-react';
+import { Plus, Trash2, Edit2 } from 'lucide-react';
 
 const PYQsTab = () => {
   const [pyqs, setPyqs] = useState([]);

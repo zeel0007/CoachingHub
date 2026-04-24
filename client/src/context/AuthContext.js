@@ -4,7 +4,7 @@
 // Provides user login state to the entire app using React Context API.
 // No JWT or sessions — stores user info in localStorage for persistence.
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 // Create context object
 const AuthContext = createContext(null);

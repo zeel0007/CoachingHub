@@ -38,6 +38,7 @@ function Quiz() {
       handleSubmit(); // Auto-submit when time is up
     }
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timerActive, timeLeft]);
 
   const startQuiz = async (quizId) => {

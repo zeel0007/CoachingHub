@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getQuizList, getQuiz, createQuiz, deleteQuiz, updateQuiz } from '../../services/api';
-import { BookOpen, Plus, Trash2, Edit2 } from 'lucide-react';
+import { Plus, Trash2, Edit2 } from 'lucide-react';
 
 const QuizzesTab = () => {
   const [quizzes, setQuizzes] = useState([]);

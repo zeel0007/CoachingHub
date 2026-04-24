@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getNotes, getNoteCategory, createNote, deleteNote, updateNote } from '../../services/api';
-import { FileText, Plus, Trash2, Edit2 } from 'lucide-react';
+import { Plus, Trash2, Edit2 } from 'lucide-react';
 
 const NotesTab = () => {
   const [notes, setNotes] = useState([]);

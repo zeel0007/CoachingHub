@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getJobs, createJob, deleteJob, updateJob } from '../../services/api';
-import { Briefcase, Plus, Trash2, Edit2 } from 'lucide-react';
+import { Plus, Trash2, Edit2 } from 'lucide-react';
 
 const JobsTab = () => {
   const [jobs, setJobs] = useState([]);
