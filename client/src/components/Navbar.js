@@ -47,9 +47,14 @@ function Navbar() {
             {user ? (
               <div className="flex items-center gap-4 border-l pl-6 border-gray-200">
                 <span className="text-sm font-medium text-gray-700">Hi, {user.name.split(' ')[0]}</span>
+                {user.role === 'admin' && (
+                  <Link to="/admin" className="text-sm font-medium text-white bg-red-600 px-3 py-1 rounded-md hover:bg-red-700">
+                    Dashboard
+                  </Link>
+                )}
                 <button
                   onClick={logout}
-                  className="text-sm font-medium text-red-600 hover:text-red-800"
+                  className="text-sm font-medium text-gray-500 hover:text-red-800"
                 >
                   Logout
                 </button>

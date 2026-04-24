@@ -5,7 +5,7 @@
 // Wraps everything in AuthProvider for global auth state.
 
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 
 // ── Layout Components ───────────────────────────────────
