@@ -73,3 +73,25 @@ app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
   console.log(`📚 API Base URL: http://localhost:${PORT}/api`);
 });
+
+// ─── Self-Ping / Keep-Alive System ─────────────────────────
+// Prevents the Render server from going to sleep due to inactivity.
+const PING_INTERVAL = 10 * 60 * 1000; // 10 minutes
+const SERVER_URL = process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`;
+
+setInterval(() => {
+  try {
+    const http = SERVER_URL.startsWith('https') ? require('https') : require('http');
+    http.get(`${SERVER_URL}/api/health`, (res) => {
+      if (res.statusCode === 200) {
+        console.log(`Server Active ✅ - Pinged Health Endpoint (${new Date().toLocaleTimeString()})`);
+      } else {
+        console.error('⚠️ Self-ping failed with status:', res.statusCode);
+      }
+    }).on('error', (err) => {
+      console.error('⚠️ Self-ping network error:', err.message);
+    });
+  } catch (err) {
+    console.error('⚠️ Self-ping execution error:', err.message);
+  }
+}, PING_INTERVAL);
