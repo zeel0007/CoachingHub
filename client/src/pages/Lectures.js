@@ -23,6 +23,25 @@ function Lectures() {
     );
   }
 
+  // Convert standard YT urls to embed format safely
+  const getEmbedUrl = (url) => {
+    if (!url) return '';
+    try {
+      let videoId = '';
+      if (url.includes('youtube.com/watch') || url.includes('m.youtube.com/watch')) {
+        const urlObj = new URL(url);
+        videoId = urlObj.searchParams.get('v');
+      } else if (url.includes('youtu.be/')) {
+        videoId = url.split('youtu.be/')[1]?.split('?')[0];
+      } else if (url.includes('youtube.com/embed/')) {
+        return url;
+      }
+      return videoId ? `https://www.youtube.com/embed/${videoId}` : url;
+    } catch (e) {
+      return url;
+    }
+  };
+
   return (
     <div className="section-container py-12 page-enter">
       <div className="mb-10 text-center">
@@ -43,7 +62,7 @@ function Lectures() {
             <div className="relative w-full pt-[56.25%] bg-[#0b1120]">
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
-                src={lecture.youtubeUrl}
+                src={getEmbedUrl(lecture.youtubeUrl)}
                 title={lecture.title}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
