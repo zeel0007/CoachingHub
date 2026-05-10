@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/CoachingHub/static/css/main.cf22611e.css",
-    "main.js": "/CoachingHub/static/js/main.db8dfb44.js",
+    "main.js": "/CoachingHub/static/js/main.9f2a3396.js",
     "index.html": "/CoachingHub/index.html",
     "main.cf22611e.css.map": "/CoachingHub/static/css/main.cf22611e.css.map",
-    "main.db8dfb44.js.map": "/CoachingHub/static/js/main.db8dfb44.js.map"
+    "main.9f2a3396.js.map": "/CoachingHub/static/js/main.9f2a3396.js.map"
   },
   "entrypoints": [
     "static/css/main.cf22611e.css",
-    "static/js/main.db8dfb44.js"
+    "static/js/main.9f2a3396.js"
   ]
 }
