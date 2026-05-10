@@ -47,17 +47,17 @@ function Home() {
         <div className="section-container relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--glass-bg)] backdrop-blur-md mb-8 border border-[var(--glass-border)] animate-fade-in text-white shadow-[0_0_15px_rgba(16,185,129,0.3)]">
             <Sparkles className="w-4 h-4 text-emerald-300 animate-pulse" />
-            <span className="text-sm font-medium tracking-wide">GPSSB Exam 2024-25 Preparation</span>
+            <span className="text-sm font-medium tracking-wide">GPSSB Exam 2026-27 Preparation</span>
           </div>
-          
+
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight animate-slide-up">
             Master the <span className="text-accent">Gram Sevak</span> Exam
           </h1>
-          
+
           <p className="text-lg md:text-xl text-primary-100 max-w-2xl mx-auto mb-10 leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
             Your ultimate companion for Gujarat Gram Sevak and VSO exams. Comprehensive notes, mock quizzes, and previous year papers tailored to the GPSSB syllabus.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <Link to="/notes" className="btn-primary text-lg px-8 py-4">
               Start Reading Notes
@@ -82,8 +82,8 @@ function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="card p-8 flex flex-col items-start animate-slide-up"
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
@@ -92,11 +92,11 @@ function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3 tracking-wide">{feature.title}</h3>
                 <p className="text-gray-400 mb-6 flex-grow">{feature.desc}</p>
-                <Link 
-                  to={feature.link} 
+                <Link
+                  to={feature.link}
                   className="font-semibold text-primary-400 hover:text-primary-300 inline-flex items-center gap-1 group"
                 >
-                  Explore Now 
+                  Explore Now
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </Link>
               </div>

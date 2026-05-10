@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { getNotes, getNoteCategory, createNote, deleteNote, updateNote } from '../../services/api';
-import { Plus, Trash2, Edit2 } from 'lucide-react';
+import { getNotes, createNote, deleteNote, updateNote } from '../../services/api';
+import { Plus, Trash2, Edit2, FileText } from 'lucide-react';
 
 const NotesTab = () => {
   const [notes, setNotes] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [form, setForm] = useState({ id: '', category: '', subject: '', topicsJson: '[]' });
+  const [form, setForm] = useState({ id: '', title: '', subject: '', driveUrl: '', description: '' });
   const [isEditing, setIsEditing] = useState(false);
 
   useEffect(() => {
@@ -26,29 +26,13 @@ const NotesTab = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let topics = [];
-      try {
-        topics = JSON.parse(form.topicsJson);
-      } catch (e) {
-        alert("Invalid JSON format for topics.");
-        return;
-      }
-      
-      const payload = {
-        id: form.id || Date.now().toString(),
-        category: form.category,
-        subject: form.subject,
-        topics: topics,
-        color: 'bg-green-50 text-green-600',
-        icon: 'Leaf'
-      };
-
+      const payload = { ...form, id: form.id || Date.now().toString() };
       if (isEditing) {
         await updateNote(form.id, payload);
       } else {
         await createNote(payload);
       }
-      setForm({ id: '', category: '', subject: '', topicsJson: '[]' });
+      setForm({ id: '', title: '', subject: '', driveUrl: '', description: '' });
       setIsEditing(false);
       fetchNotes();
     } catch (err) {
@@ -57,7 +41,7 @@ const NotesTab = () => {
   };
 
   const handleDelete = async (id) => {
-    if (window.confirm('Are you certain you want to delete this Note Catalog?')) {
+    if (window.confirm('Are you certain you want to delete this Note?')) {
       try {
         await deleteNote(id);
         fetchNotes();
@@ -67,19 +51,9 @@ const NotesTab = () => {
     }
   };
 
-  const handleEdit = async (noteSummary) => {
-    try {
-      const fullNote = await getNoteCategory(noteSummary.id);
-      setForm({
-        id: fullNote.id,
-        category: fullNote.category,
-        subject: fullNote.subject || '',
-        topicsJson: JSON.stringify(fullNote.topics, null, 2)
-      });
-      setIsEditing(true);
-    } catch {
-      alert("Failed to load full note details");
-    }
+  const handleEdit = (note) => {
+    setForm(note);
+    setIsEditing(true);
   };
 
   return (
@@ -88,27 +62,31 @@ const NotesTab = () => {
       <div className="lg:col-span-1 bg-[#1e293b]/50 p-6 rounded-lg border border-[var(--glass-border)]">
         <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-white">
           {isEditing ? <Edit2 className="w-5 h-5 text-blue-400" /> : <Plus className="w-5 h-5 text-primary-400" />}
-          {isEditing ? 'Edit Category' : 'Create Category'}
+          {isEditing ? 'Edit Note' : 'Upload PDF Note'}
         </h3>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-1 text-gray-300">Category Title</label>
-            <input required type="text" value={form.category} onChange={e => setForm({...form, category: e.target.value})} className="w-full bg-[#0f172a] border border-[var(--glass-border)] text-white p-2 rounded focus:border-primary-500 focus:outline-none" placeholder="e.g. Agriculture Notes" />
+            <label className="block text-sm font-medium mb-1 text-gray-300">Note Title</label>
+            <input required type="text" value={form.title} onChange={e => setForm({...form, title: e.target.value})} className="w-full bg-[#0f172a] border border-[var(--glass-border)] text-white p-2 rounded focus:border-primary-500 focus:outline-none" placeholder="e.g. Agriculture Basics PDF" />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1 text-gray-300">Subject Subtitle</label>
-            <input type="text" value={form.subject} onChange={e => setForm({...form, subject: e.target.value})} className="w-full bg-[#0f172a] border border-[var(--glass-border)] text-white p-2 rounded focus:border-primary-500 focus:outline-none" placeholder="e.g. Agronomy Basics" />
+            <label className="block text-sm font-medium mb-1 text-gray-300">Subject</label>
+            <input required type="text" value={form.subject} onChange={e => setForm({...form, subject: e.target.value})} className="w-full bg-[#0f172a] border border-[var(--glass-border)] text-white p-2 rounded focus:border-primary-500 focus:outline-none" placeholder="e.g. Agriculture" />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1 text-gray-300">Topics Array (JSON Format)</label>
-            <textarea required value={form.topicsJson} onChange={e => setForm({...form, topicsJson: e.target.value})} className="w-full bg-[#0f172a] border border-[var(--glass-border)] text-white p-2 rounded font-mono text-xs focus:border-primary-500 focus:outline-none" rows="8" placeholder='[{"id":"t1","title":"...","content":"...","keyPoints":["..."]}]'></textarea>
+            <label className="block text-sm font-medium mb-1 text-gray-300">Google Drive PDF URL</label>
+            <input required type="url" value={form.driveUrl} onChange={e => setForm({...form, driveUrl: e.target.value})} className="w-full bg-[#0f172a] border border-[var(--glass-border)] text-white p-2 rounded focus:border-primary-500 focus:outline-none" placeholder="https://drive.google.com/file/d/..." />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1 text-gray-300">Description</label>
+            <textarea value={form.description} onChange={e => setForm({...form, description: e.target.value})} className="w-full bg-[#0f172a] border border-[var(--glass-border)] text-white p-2 rounded focus:border-primary-500 focus:outline-none" rows="3"></textarea>
           </div>
           <div className="flex gap-2">
             <button type="submit" className="w-full bg-primary-600 text-white p-2 rounded hover:bg-primary-700">
-              {isEditing ? 'Update Notes' : 'Upload Notes'}
+              {isEditing ? 'Update Note' : 'Publish Note'}
             </button>
             {isEditing && (
-              <button type="button" onClick={() => { setIsEditing(false); setForm({ id: '', category: '', subject: '', topicsJson: '[]' }); }} className="w-full bg-gray-600 text-white p-2 rounded hover:bg-gray-500">
+              <button type="button" onClick={() => { setIsEditing(false); setForm({ id: '', title: '', subject: '', driveUrl: '', description: '' }); }} className="w-full bg-gray-600 text-white p-2 rounded hover:bg-gray-500">
                 Cancel
               </button>
             )}
@@ -118,11 +96,11 @@ const NotesTab = () => {
 
       {/* List Section */}
       <div className="lg:col-span-2 bg-[#1e293b]/50 rounded-lg border border-[var(--glass-border)] overflow-x-auto">
-        {loading ? <div className="p-8 text-center text-gray-400">Loading Content...</div> : (
+        {loading ? <div className="p-8 text-center text-gray-400">Loading Notes...</div> : (
           <table className="w-full text-sm text-left text-gray-300">
             <thead className="bg-[#0f172a] border-b border-[var(--glass-border)] text-gray-400">
               <tr>
-                <th className="px-4 py-3">Category</th>
+                <th className="px-4 py-3">Title</th>
                 <th className="px-4 py-3">Subject</th>
                 <th className="px-4 py-3 text-right">Actions</th>
               </tr>
@@ -130,7 +108,10 @@ const NotesTab = () => {
             <tbody>
               {notes.map(n => (
                 <tr key={n.id} className="border-b border-[var(--glass-border)] hover:bg-[#334155]/50">
-                  <td className="px-4 py-3 font-medium text-white">{n.category}</td>
+                  <td className="px-4 py-3 font-medium text-white flex items-center gap-2">
+                    <FileText className="w-4 h-4 text-emerald-500" />
+                    {n.title}
+                  </td>
                   <td className="px-4 py-3">{n.subject}</td>
                   <td className="px-4 py-3 text-right flex justify-end gap-2">
                     <button onClick={() => handleEdit(n)} className="text-blue-400 hover:text-blue-300 p-1"><Edit2 className="w-4 h-4" /></button>
