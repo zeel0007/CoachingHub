@@ -85,11 +85,9 @@ function PYQs() {
             </div>
             
             <a 
-              href={paper.fileUrl} 
-              onClick={(e) => {
-                e.preventDefault();
-                alert('This is a mock download link. In real application, it would trigger a PDF download.');
-              }}
+              href={paper.downloadLink || paper.fileUrl} 
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-outline shrink-0 w-full sm:w-auto justify-center"
             >
                <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
