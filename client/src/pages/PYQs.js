@@ -34,14 +34,14 @@ function PYQs() {
     <div className="section-container py-12 page-enter">
       <div className="mb-10 text-center">
         <h1 className="section-title mb-4">Previous Year Papers</h1>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <p className="text-gray-400 max-w-2xl mx-auto">
           Download original GPSSB question papers for better understanding of exam pattern, difficulty level, and important topics.
         </p>
       </div>
 
       {/* Filter Section */}
       <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-        <span className="text-gray-600 font-medium">Filter by Year:</span>
+        <span className="text-gray-400 font-medium">Filter by Year:</span>
         <div className="flex gap-2">
           {years.map(year => (
             <button
@@ -49,8 +49,8 @@ function PYQs() {
               onClick={() => setFilterYear(year)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 filterYear === year 
-                  ? 'bg-primary-600 text-white' 
-                  : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-50'
+                  ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-[0_0_10px_rgba(16,185,129,0.3)] border border-primary-400' 
+                  : 'bg-[#1e293b] text-gray-400 border border-[var(--glass-border)] hover:bg-[#334155]'
               }`}
             >
               {year}
@@ -64,24 +64,24 @@ function PYQs() {
         {filteredPapers.map((paper, idx) => (
           <div 
             key={paper.id} 
-            className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 animate-slide-up"
+            className="card p-6 border-[var(--glass-border)] hover:border-primary-500/50 hover:shadow-[0_0_15px_rgba(16,185,129,0.1)] transition-all duration-300 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 animate-slide-up"
             style={{ animationDelay: `${idx * 0.1}s` }}
           >
             <div className="flex-grow">
               <div className="flex items-center gap-3 mb-2">
-                <span className="bg-amber-100 text-amber-800 text-xs font-bold px-2 py-1 rounded">
+                <span className="bg-amber-900/40 text-amber-300 border border-amber-500/30 text-xs font-bold px-2 py-1 rounded">
                   {paper.year}
                 </span>
                 <span className="text-sm font-medium text-gray-500">{paper.conducted_by}</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-1">{paper.title}</h3>
-              <p className="text-gray-600 text-sm mb-3">Sections: {paper.subject}</p>
+              <h3 className="text-xl font-bold text-white mb-1">{paper.title}</h3>
+              <p className="text-gray-400 text-sm mb-3">Sections: {paper.subject}</p>
               <div className="flex items-center gap-4 text-xs font-medium text-gray-500">
                 <span className="flex items-center gap-1"><FileText className="w-3 h-3"/> {paper.totalQuestions} MCQ</span>
                 <span className="flex items-center gap-1"><Timer className="w-3 h-3"/> {paper.duration}</span>
                 <span className="flex items-center gap-1"><Download className="w-3 h-3"/> {paper.fileSize}</span>
               </div>
-              <p className="text-gray-600 text-xs mt-3 italic">{paper.description}</p>
+              <p className="text-gray-400 text-xs mt-3 italic">{paper.description}</p>
             </div>
             
             <a 

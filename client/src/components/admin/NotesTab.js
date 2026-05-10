@@ -85,30 +85,30 @@ const NotesTab = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
       {/* Form Section */}
-      <div className="lg:col-span-1 bg-white p-6 rounded-lg border">
-        <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-          {isEditing ? <Edit2 className="w-5 h-5 text-blue-600" /> : <Plus className="w-5 h-5 text-green-600" />}
+      <div className="lg:col-span-1 bg-[#1e293b]/50 p-6 rounded-lg border border-[var(--glass-border)]">
+        <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-white">
+          {isEditing ? <Edit2 className="w-5 h-5 text-blue-400" /> : <Plus className="w-5 h-5 text-primary-400" />}
           {isEditing ? 'Edit Category' : 'Create Category'}
         </h3>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-1">Category Title</label>
-            <input required type="text" value={form.category} onChange={e => setForm({...form, category: e.target.value})} className="w-full border p-2 rounded" placeholder="e.g. Agriculture Notes" />
+            <label className="block text-sm font-medium mb-1 text-gray-300">Category Title</label>
+            <input required type="text" value={form.category} onChange={e => setForm({...form, category: e.target.value})} className="w-full bg-[#0f172a] border border-[var(--glass-border)] text-white p-2 rounded focus:border-primary-500 focus:outline-none" placeholder="e.g. Agriculture Notes" />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1">Subject Subtitle</label>
-            <input type="text" value={form.subject} onChange={e => setForm({...form, subject: e.target.value})} className="w-full border p-2 rounded" placeholder="e.g. Agronomy Basics" />
+            <label className="block text-sm font-medium mb-1 text-gray-300">Subject Subtitle</label>
+            <input type="text" value={form.subject} onChange={e => setForm({...form, subject: e.target.value})} className="w-full bg-[#0f172a] border border-[var(--glass-border)] text-white p-2 rounded focus:border-primary-500 focus:outline-none" placeholder="e.g. Agronomy Basics" />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1">Topics Array (JSON Format)</label>
-            <textarea required value={form.topicsJson} onChange={e => setForm({...form, topicsJson: e.target.value})} className="w-full border p-2 rounded font-mono text-xs" rows="8" placeholder='[{"id":"t1","title":"...","content":"...","keyPoints":["..."]}]'></textarea>
+            <label className="block text-sm font-medium mb-1 text-gray-300">Topics Array (JSON Format)</label>
+            <textarea required value={form.topicsJson} onChange={e => setForm({...form, topicsJson: e.target.value})} className="w-full bg-[#0f172a] border border-[var(--glass-border)] text-white p-2 rounded font-mono text-xs focus:border-primary-500 focus:outline-none" rows="8" placeholder='[{"id":"t1","title":"...","content":"...","keyPoints":["..."]}]'></textarea>
           </div>
           <div className="flex gap-2">
             <button type="submit" className="w-full bg-primary-600 text-white p-2 rounded hover:bg-primary-700">
               {isEditing ? 'Update Notes' : 'Upload Notes'}
             </button>
             {isEditing && (
-              <button type="button" onClick={() => { setIsEditing(false); setForm({ id: '', category: '', subject: '', topicsJson: '[]' }); }} className="w-full bg-gray-200 text-gray-800 p-2 rounded hover:bg-gray-300">
+              <button type="button" onClick={() => { setIsEditing(false); setForm({ id: '', category: '', subject: '', topicsJson: '[]' }); }} className="w-full bg-gray-600 text-white p-2 rounded hover:bg-gray-500">
                 Cancel
               </button>
             )}
@@ -117,10 +117,10 @@ const NotesTab = () => {
       </div>
 
       {/* List Section */}
-      <div className="lg:col-span-2 bg-white rounded-lg border overflow-hidden">
-        {loading ? <div className="p-8 text-center">Loading Content...</div> : (
-          <table className="w-full text-sm text-left">
-            <thead className="bg-gray-50 border-b">
+      <div className="lg:col-span-2 bg-[#1e293b]/50 rounded-lg border border-[var(--glass-border)] overflow-hidden">
+        {loading ? <div className="p-8 text-center text-gray-400">Loading Content...</div> : (
+          <table className="w-full text-sm text-left text-gray-300">
+            <thead className="bg-[#0f172a] border-b border-[var(--glass-border)] text-gray-400">
               <tr>
                 <th className="px-4 py-3">Category</th>
                 <th className="px-4 py-3">Subject</th>
@@ -129,12 +129,12 @@ const NotesTab = () => {
             </thead>
             <tbody>
               {notes.map(n => (
-                <tr key={n.id} className="border-b hover:bg-gray-50">
-                  <td className="px-4 py-3 font-medium">{n.category}</td>
+                <tr key={n.id} className="border-b border-[var(--glass-border)] hover:bg-[#334155]/50">
+                  <td className="px-4 py-3 font-medium text-white">{n.category}</td>
                   <td className="px-4 py-3">{n.subject}</td>
                   <td className="px-4 py-3 text-right flex justify-end gap-2">
-                    <button onClick={() => handleEdit(n)} className="text-blue-600 hover:text-blue-800 p-1"><Edit2 className="w-4 h-4" /></button>
-                    <button onClick={() => handleDelete(n.id)} className="text-red-600 hover:text-red-800 p-1"><Trash2 className="w-4 h-4" /></button>
+                    <button onClick={() => handleEdit(n)} className="text-blue-400 hover:text-blue-300 p-1"><Edit2 className="w-4 h-4" /></button>
+                    <button onClick={() => handleDelete(n.id)} className="text-red-400 hover:text-red-300 p-1"><Trash2 className="w-4 h-4" /></button>
                   </td>
                 </tr>
               ))}

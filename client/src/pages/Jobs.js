@@ -16,8 +16,8 @@ function Jobs() {
 
   const getStatusColor = (status) => {
     return status.toLowerCase() === 'active' 
-      ? 'bg-green-100 text-green-800 border-green-200' 
-      : 'bg-red-100 text-red-800 border-red-200';
+      ? 'bg-green-500/20 text-green-300 border-green-500/30' 
+      : 'bg-red-500/20 text-red-300 border-red-500/30';
   };
 
   if (loading) {
@@ -32,7 +32,7 @@ function Jobs() {
     <div className="section-container py-12 page-enter">
       <div className="mb-10 text-center">
         <h1 className="section-title mb-4">Latest Govt Job Updates</h1>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <p className="text-gray-400 max-w-2xl mx-auto">
           Stay updated with the latest recruitment notifications from GPSSB, GPSC, and other Gujarat government departments.
         </p>
       </div>
@@ -41,15 +41,15 @@ function Jobs() {
         {jobs.map((job, idx) => (
           <div 
             key={job.id} 
-            className="card bg-white overflow-hidden flex flex-col h-full animate-slide-up"
+            className="card overflow-hidden flex flex-col h-full animate-slide-up"
             style={{ animationDelay: `${idx * 0.1}s` }}
           >
             {/* Top decorative bar */}
-            <div className={`h-2 w-full ${job.status.toLowerCase() === 'active' ? 'bg-primary-500' : 'bg-gray-400'}`}></div>
+            <div className={`h-2 w-full ${job.status.toLowerCase() === 'active' ? 'bg-gradient-to-r from-primary-400 to-primary-600' : 'bg-gray-600'}`}></div>
             
             <div className="p-6 flex-grow flex flex-col">
               <div className="flex justify-between items-start mb-4">
-                <span className="text-xs font-bold px-2 py-1 bg-gray-100 text-gray-600 rounded">
+                <span className="text-xs font-bold px-2 py-1 bg-[#1e293b] text-gray-300 border border-[var(--glass-border)] rounded">
                   {job.category}
                 </span>
                 <span className={`text-xs font-bold px-2 py-1 rounded border ${getStatusColor(job.status)}`}>
@@ -57,23 +57,23 @@ function Jobs() {
                 </span>
               </div>
               
-              <h3 className="text-xl font-bold text-gray-900 mb-2 leading-tight">{job.title}</h3>
-              <p className="text-primary-700 font-medium text-sm mb-4">{job.department}</p>
+              <h3 className="text-xl font-bold text-white mb-2 leading-tight">{job.title}</h3>
+              <p className="text-primary-400 font-medium text-sm mb-4">{job.department}</p>
               
-              <div className="space-y-2 mt-auto mb-6 bg-gray-50 p-4 rounded-xl text-sm">
+              <div className="space-y-2 mt-auto mb-6 bg-[#1e293b]/50 p-4 rounded-xl border border-[var(--glass-border)] text-sm">
                 <div className="flex justify-between">
-                  <span className="text-gray-500">Total Posts:</span>
-                  <span className="font-semibold text-gray-900">{job.posts}</span>
+                  <span className="text-gray-400">Total Posts:</span>
+                  <span className="font-semibold text-white">{job.posts}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-500">Last Date:</span>
-                  <span className={`font-semibold ${job.status.toLowerCase() === 'active' ? 'text-red-600' : 'text-gray-900'}`}>
+                  <span className="text-gray-400">Last Date:</span>
+                  <span className={`font-semibold ${job.status.toLowerCase() === 'active' ? 'text-red-400' : 'text-gray-400'}`}>
                     {new Date(job.lastDate).toLocaleDateString('en-GB')}
                   </span>
                 </div>
-                <div className="flex flex-col mt-2 pt-2 border-t border-gray-200">
-                  <span className="text-gray-500 mb-1">Eligibility:</span>
-                  <span className="font-medium text-gray-900">{job.eligibility}</span>
+                <div className="flex flex-col mt-2 pt-2 border-t border-[var(--glass-border)]">
+                  <span className="text-gray-400 mb-1">Eligibility:</span>
+                  <span className="font-medium text-white">{job.eligibility}</span>
                 </div>
               </div>
 
@@ -83,8 +83,8 @@ function Jobs() {
                 rel="noopener noreferrer"
                 className={`w-full py-3 rounded-xl font-semibold text-center transition-all ${
                   job.status.toLowerCase() === 'active' 
-                    ? 'bg-primary-50 text-primary-700 hover:bg-primary-600 hover:text-white border border-primary-200 hover:border-transparent' 
-                    : 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                    ? 'bg-primary-500/20 text-primary-300 hover:bg-primary-600 hover:text-white border border-primary-500/30 hover:border-transparent' 
+                    : 'bg-[#1e293b]/50 text-gray-500 cursor-not-allowed border border-[var(--glass-border)]'
                 }`}
                 onClick={(e) => {
                   if(job.status.toLowerCase() !== 'active') {

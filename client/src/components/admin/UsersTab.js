@@ -24,12 +24,12 @@ const UsersTab = () => {
 
   return (
     <div>
-      <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-        <Users className="w-5 h-5 text-primary-600" /> Registered Students Directory
+      <h2 className="text-xl font-bold mb-6 flex items-center gap-2 text-white">
+        <Users className="w-5 h-5 text-primary-400" /> Registered Students Directory
       </h2>
-      <div className="overflow-x-auto bg-white border border-gray-200 rounded-lg">
-        <table className="w-full text-sm text-left">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 border-b">
+      <div className="overflow-x-auto bg-[#1e293b]/50 border border-[var(--glass-border)] rounded-lg">
+        <table className="w-full text-sm text-left text-gray-300">
+          <thead className="text-xs text-gray-400 uppercase bg-[#0f172a] border-b border-[var(--glass-border)]">
             <tr>
               <th className="px-6 py-4">Name</th>
               <th className="px-6 py-4">Email</th>
@@ -39,11 +39,11 @@ const UsersTab = () => {
           </thead>
           <tbody>
             {users.map(u => (
-              <tr key={u._id} className="border-b hover:bg-gray-50">
-                <td className="px-6 py-4 font-medium text-gray-900">{u.name}</td>
+              <tr key={u._id} className="border-b border-[var(--glass-border)] hover:bg-[#334155]/50">
+                <td className="px-6 py-4 font-medium text-white">{u.name}</td>
                 <td className="px-6 py-4">{u.email}</td>
                 <td className="px-6 py-4">
-                  <span className={`px-2 py-1 rounded-full text-xs font-semibold ${u.role === 'admin' ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`}>
+                  <span className={`px-2 py-1 rounded-full text-xs font-semibold border ${u.role === 'admin' ? 'bg-red-900/30 text-red-400 border-red-500/30' : 'bg-green-900/30 text-green-400 border-green-500/30'}`}>
                     {u.role}
                   </span>
                 </td>

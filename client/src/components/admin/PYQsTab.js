@@ -59,40 +59,40 @@ const PYQsTab = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
       {/* Form Section */}
-      <div className="lg:col-span-1 bg-white p-6 rounded-lg border">
-        <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-          {isEditing ? <Edit2 className="w-5 h-5 text-blue-600" /> : <Plus className="w-5 h-5 text-green-600" />}
+      <div className="lg:col-span-1 bg-[#1e293b]/50 p-6 rounded-lg border border-[var(--glass-border)]">
+        <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-white">
+          {isEditing ? <Edit2 className="w-5 h-5 text-blue-400" /> : <Plus className="w-5 h-5 text-primary-400" />}
           {isEditing ? 'Edit Paper' : 'Upload Previous Paper'}
         </h3>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-1">Paper Title</label>
-            <input required type="text" value={form.title} onChange={e => setForm({...form, title: e.target.value})} className="w-full border p-2 rounded" placeholder="e.g. Gram Sevak 2018" />
+            <label className="block text-sm font-medium mb-1 text-gray-300">Paper Title</label>
+            <input required type="text" value={form.title} onChange={e => setForm({...form, title: e.target.value})} className="w-full bg-[#0f172a] border border-[var(--glass-border)] text-white p-2 rounded focus:border-primary-500 focus:outline-none" placeholder="e.g. Gram Sevak 2018" />
           </div>
           <div className="grid grid-cols-2 gap-2">
             <div>
-              <label className="block text-sm font-medium mb-1">Year</label>
-              <input type="text" value={form.year} onChange={e => setForm({...form, year: e.target.value})} className="w-full border p-2 rounded" placeholder="2018" />
+              <label className="block text-sm font-medium mb-1 text-gray-300">Year</label>
+              <input type="text" value={form.year} onChange={e => setForm({...form, year: e.target.value})} className="w-full bg-[#0f172a] border border-[var(--glass-border)] text-white p-2 rounded focus:border-primary-500 focus:outline-none" placeholder="2018" />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-1">Subject</label>
-              <input type="text" value={form.subject} onChange={e => setForm({...form, subject: e.target.value})} className="w-full border p-2 rounded" placeholder="Agriculture" />
+              <label className="block text-sm font-medium mb-1 text-gray-300">Subject</label>
+              <input type="text" value={form.subject} onChange={e => setForm({...form, subject: e.target.value})} className="w-full bg-[#0f172a] border border-[var(--glass-border)] text-white p-2 rounded focus:border-primary-500 focus:outline-none" placeholder="Agriculture" />
             </div>
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1">Total Questions</label>
-            <input type="number" value={form.totalQuestions} onChange={e => setForm({...form, totalQuestions: e.target.value})} className="w-full border p-2 rounded" placeholder="100" />
+            <label className="block text-sm font-medium mb-1 text-gray-300">Total Questions</label>
+            <input type="number" value={form.totalQuestions} onChange={e => setForm({...form, totalQuestions: e.target.value})} className="w-full bg-[#0f172a] border border-[var(--glass-border)] text-white p-2 rounded focus:border-primary-500 focus:outline-none" placeholder="100" />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1">Secure Download Link (External URL)</label>
-            <input type="text" value={form.downloadLink} onChange={e => setForm({...form, downloadLink: e.target.value})} className="w-full border p-2 rounded" placeholder="https://" />
+            <label className="block text-sm font-medium mb-1 text-gray-300">Secure Download Link (External URL)</label>
+            <input type="text" value={form.downloadLink} onChange={e => setForm({...form, downloadLink: e.target.value})} className="w-full bg-[#0f172a] border border-[var(--glass-border)] text-white p-2 rounded focus:border-primary-500 focus:outline-none" placeholder="https://" />
           </div>
           <div className="flex gap-2">
             <button type="submit" className="w-full bg-primary-600 text-white p-2 rounded hover:bg-primary-700">
               {isEditing ? 'Update PYQ' : 'Publish PYQ'}
             </button>
             {isEditing && (
-              <button type="button" onClick={() => { setIsEditing(false); setForm({ id: '', title: '', year: '', subject: '', totalQuestions: '', downloadLink: '' }); }} className="w-full bg-gray-200 text-gray-800 p-2 rounded hover:bg-gray-300">
+              <button type="button" onClick={() => { setIsEditing(false); setForm({ id: '', title: '', year: '', subject: '', totalQuestions: '', downloadLink: '' }); }} className="w-full bg-gray-600 text-white p-2 rounded hover:bg-gray-500">
                 Cancel
               </button>
             )}
@@ -101,10 +101,10 @@ const PYQsTab = () => {
       </div>
 
       {/* List Section */}
-      <div className="lg:col-span-2 bg-white rounded-lg border overflow-hidden">
-        {loading ? <div className="p-8 text-center">Loading Papers...</div> : (
-          <table className="w-full text-sm text-left">
-            <thead className="bg-gray-50 border-b">
+      <div className="lg:col-span-2 bg-[#1e293b]/50 rounded-lg border border-[var(--glass-border)] overflow-hidden">
+        {loading ? <div className="p-8 text-center text-gray-400">Loading Papers...</div> : (
+          <table className="w-full text-sm text-left text-gray-300">
+            <thead className="bg-[#0f172a] border-b border-[var(--glass-border)] text-gray-400">
               <tr>
                 <th className="px-4 py-3">Title</th>
                 <th className="px-4 py-3">Year</th>
@@ -113,12 +113,12 @@ const PYQsTab = () => {
             </thead>
             <tbody>
               {pyqs.map(p => (
-                <tr key={p.id} className="border-b hover:bg-gray-50">
-                  <td className="px-4 py-3 font-medium">{p.title}</td>
+                <tr key={p.id} className="border-b border-[var(--glass-border)] hover:bg-[#334155]/50">
+                  <td className="px-4 py-3 font-medium text-white">{p.title}</td>
                   <td className="px-4 py-3">{p.year}</td>
                   <td className="px-4 py-3 text-right flex justify-end gap-2">
-                    <button onClick={() => handleEdit(p)} className="text-blue-600 hover:text-blue-800 p-1"><Edit2 className="w-4 h-4" /></button>
-                    <button onClick={() => handleDelete(p.id)} className="text-red-600 hover:text-red-800 p-1"><Trash2 className="w-4 h-4" /></button>
+                    <button onClick={() => handleEdit(p)} className="text-blue-400 hover:text-blue-300 p-1"><Edit2 className="w-4 h-4" /></button>
+                    <button onClick={() => handleDelete(p.id)} className="text-red-400 hover:text-red-300 p-1"><Trash2 className="w-4 h-4" /></button>
                   </td>
                 </tr>
               ))}

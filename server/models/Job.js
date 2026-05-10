@@ -9,6 +9,7 @@ const JobSchema = new mongoose.Schema({
   totalPosts: String,
   status: { type: String, enum: ['Active', 'Closed', 'Coming Soon'] },
   link: String,
+  applyLink: String,
   description: String,
   highlights: [String]
 }, { timestamps: true });

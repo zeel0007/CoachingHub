@@ -18,6 +18,7 @@ import Notes from './pages/Notes';
 import Quiz from './pages/Quiz';
 import PYQs from './pages/PYQs';
 import Jobs from './pages/Jobs';
+import Lectures from './pages/Lectures';
 import Login from './pages/Login';
 import AdminDashboard from './pages/AdminDashboard';
 
@@ -26,7 +27,7 @@ function App() {
     // Provide auth state to all components
     <AuthProvider>
       <Router>
-        <div className="min-h-screen flex flex-col bg-gray-50">
+        <div className="min-h-screen flex flex-col bg-[var(--color-bg)] text-white">
           {/* Navigation Bar — shown on all pages */}
           <Navbar />
 
@@ -39,6 +40,7 @@ function App() {
               <Route path="/quiz" element={<Quiz />} />
               <Route path="/pyqs" element={<PYQs />} />
               <Route path="/jobs" element={<Jobs />} />
+              <Route path="/lectures" element={<Lectures />} />
               <Route path="/login" element={<Login />} />
               <Route path="/admin" element={<AdminDashboard />} />
             </Routes>

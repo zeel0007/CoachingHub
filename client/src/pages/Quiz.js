@@ -114,17 +114,17 @@ function Quiz() {
       <div className="section-container py-12 page-enter">
         <div className="text-center mb-12">
           <h1 className="section-title mb-4">Practice Quizzes</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-400 max-w-2xl mx-auto">
             Test your preparation level with our topic-wise Mock Tests. Real exam pattern with timer and detailed explanations.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {quizList.map((quiz) => (
-            <div key={quiz.id} className="card p-6 flex flex-col items-start bg-white hover:border-primary-300">
-              <span className="badge bg-primary-100 text-primary-800 mb-4">{quiz.category}</span>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{quiz.category} Mock Test</h3>
-              <p className="text-gray-600 mb-6 flex-grow text-sm flex items-center gap-4">
+            <div key={quiz.id} className="card p-6 flex flex-col items-start hover:border-primary-500/50">
+              <span className="badge bg-primary-900/50 text-primary-300 mb-4 border border-primary-500/30">{quiz.category}</span>
+              <h3 className="text-xl font-bold text-white mb-2">{quiz.category} Mock Test</h3>
+              <p className="text-gray-400 mb-6 flex-grow text-sm flex items-center gap-4">
                 <span className="flex items-center gap-1"><FileText className="w-4 h-4"/> {quiz.totalQuestions} Questions</span>
                 <span className="flex items-center gap-1"><Timer className="w-4 h-4"/> {quiz.totalQuestions} Mins</span>
               </p>
@@ -149,16 +149,16 @@ function Quiz() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 page-enter">
       {/* Quiz Header */}
-      <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-6 flex flex-wrap justify-between items-center gap-4">
+      <div className="card p-6 mb-6 flex flex-wrap justify-between items-center gap-4">
         <div>
-          <h2 className="text-xl font-bold text-gray-900">{activeQuiz.category} Test</h2>
-          <p className="text-sm text-gray-500 mt-1">Question {currentQuestionIndex + 1} of {totalQ}</p>
+          <h2 className="text-xl font-bold text-white">{activeQuiz.category} Test</h2>
+          <p className="text-sm text-gray-400 mt-1">Question {currentQuestionIndex + 1} of {totalQ}</p>
         </div>
         
         <div className="flex items-center gap-6">
           <div className="text-right">
-            <span className="text-sm text-gray-500 block">Time Left</span>
-            <span className={`text-xl font-display font-bold ${timeLeft < 60 ? 'text-red-600 animate-pulse' : 'text-primary-700'}`}>
+            <span className="text-sm text-gray-400 block">Time Left</span>
+            <span className={`text-xl font-display font-bold ${timeLeft < 60 ? 'text-red-500 animate-pulse' : 'text-primary-400'}`}>
               <Timer className="w-5 h-5 inline mr-1" /> {formatTime(timeLeft)}
             </span>
           </div>
@@ -169,16 +169,16 @@ function Quiz() {
       </div>
 
       {/* Progress Bar */}
-      <div className="w-full bg-gray-200 h-2 mb-8 rounded-full overflow-hidden">
-        <div className="bg-primary-500 h-2 transition-all duration-300" style={{ width: `${progress}%` }}></div>
+      <div className="w-full bg-[#1e293b] h-2 mb-8 rounded-full overflow-hidden border border-[var(--glass-border)]">
+        <div className="bg-gradient-to-r from-primary-600 to-primary-400 h-2 transition-all duration-300 shadow-[0_0_10px_rgba(16,185,129,0.5)]" style={{ width: `${progress}%` }}></div>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Main Question Area */}
         <div className="lg:w-2/3">
-          <div className="card p-6 md:p-8 bg-white min-h-[400px]">
-            <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-6">
-              <span className="text-primary-600 mr-2">Q{currentQuestionIndex + 1}.</span> 
+          <div className="card p-6 md:p-8 min-h-[400px]">
+            <h3 className="text-lg md:text-xl font-semibold text-white mb-6">
+              <span className="text-primary-400 mr-2">Q{currentQuestionIndex + 1}.</span> 
               {currentQ.question}
             </h3>
 
@@ -188,7 +188,7 @@ function Quiz() {
                 const isCorrect = isSubmitted && idx === currentQ.answer;
                 const isWrong = isSubmitted && isSelected && idx !== currentQ.answer;
                 
-                let optionStyle = 'border-gray-200 hover:border-primary-300 hover:bg-gray-50';
+                let optionStyle = 'border-[var(--glass-border)] text-gray-300 hover:border-primary-500/50 hover:bg-[#1e293b]/50';
                 if (isSelected && !isSubmitted) optionStyle = 'option-selected';
                 if (isCorrect) optionStyle = 'option-correct';
                 if (isWrong) optionStyle = 'option-wrong';
@@ -210,11 +210,11 @@ function Quiz() {
 
             {/* Explanation box (shows only after submit) */}
             {isSubmitted && (
-              <div className="mt-8 p-4 bg-blue-50 border border-blue-100 rounded-xl animate-fade-in">
-                <h4 className="font-semibold text-blue-800 mb-1 flex items-center gap-2">
-                  <span className="text-blue-600"><Lightbulb className="w-5 h-5" /></span> Explanation
+              <div className="mt-8 p-4 bg-blue-900/20 border border-blue-500/30 rounded-xl animate-fade-in backdrop-blur-sm">
+                <h4 className="font-semibold text-blue-300 mb-1 flex items-center gap-2">
+                  <span className="text-blue-400"><Lightbulb className="w-5 h-5" /></span> Explanation
                 </h4>
-                <p className="text-blue-900 text-sm">{currentQ.explanation}</p>
+                <p className="text-blue-100 text-sm">{currentQ.explanation}</p>
               </div>
             )}
           </div>
@@ -225,7 +225,7 @@ function Quiz() {
               onClick={prevQuestion}
               disabled={currentQuestionIndex === 0}
               className={`px-6 py-3 rounded-xl font-semibold transition-all ${
-                currentQuestionIndex === 0 ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : 'bg-white border border-gray-200 text-gray-700 hover:bg-gray-50'
+                currentQuestionIndex === 0 ? 'bg-[#1e293b]/50 text-gray-600 cursor-not-allowed border border-[var(--glass-border)]' : 'bg-[#1e293b] border border-[var(--glass-border)] text-gray-300 hover:bg-[#334155]'
               }`}
             >
               ← Previous
@@ -255,18 +255,18 @@ function Quiz() {
         <div className="lg:w-1/3 space-y-6">
           {/* Result Card */}
           {isSubmitted && (
-            <div className="card p-6 bg-white text-center border-t-8 border-t-primary-500 animate-slide-up">
-              <h3 className="font-bold text-gray-900 mb-2">Test Completed!</h3>
-              <div className="inline-flex justify-center items-center w-24 h-24 rounded-full bg-primary-50 mb-4 border-4 border-primary-200">
-                <span className="text-3xl font-display font-bold text-primary-700">{score}/{totalQ}</span>
+            <div className="card p-6 text-center border-t-8 border-t-primary-500 animate-slide-up">
+              <h3 className="font-bold text-white mb-2">Test Completed!</h3>
+              <div className="inline-flex justify-center items-center w-24 h-24 rounded-full bg-primary-900/30 mb-4 border-4 border-primary-500/30 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+                <span className="text-3xl font-display font-bold text-primary-400">{score}/{totalQ}</span>
               </div>
-              <p className="mb-4 text-sm text-gray-600">
+              <p className="mb-4 text-sm text-gray-400">
                 Percentage: {Math.round((score / totalQ) * 100)}%
               </p>
               
               {!user && (
-                <div className="bg-amber-50 p-3 rounded-lg border border-amber-200 mb-4 text-xs text-amber-800">
-                  <Link to="/login" className="font-bold underline">Login</Link> to permanently save your scores!
+                <div className="bg-amber-900/30 p-3 rounded-lg border border-amber-500/30 mb-4 text-xs text-amber-300">
+                  <Link to="/login" className="font-bold underline text-amber-200">Login</Link> to permanently save your scores!
                 </div>
               )}
               
@@ -280,8 +280,8 @@ function Quiz() {
           )}
 
           {/* Question Palette */}
-          <div className="card p-6 bg-white">
-            <h3 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wider">Question Navigator</h3>
+          <div className="card p-6">
+            <h3 className="font-bold text-gray-300 mb-4 text-sm uppercase tracking-wider">Question Navigator</h3>
             <div className="grid grid-cols-5 sm:grid-cols-10 lg:grid-cols-5 gap-2">
               {activeQuiz.questions.map((_, idx) => {
                 const isSelected = selectedOptions[idx] !== undefined;
@@ -291,12 +291,12 @@ function Quiz() {
                 
                 if (isSubmitted) {
                    const correct = selectedOptions[idx] === activeQuiz.questions[idx].answer;
-                   btnClass += correct ? 'bg-green-100 text-green-700 border border-green-300' : 
-                               (isSelected ? 'bg-red-100 text-red-700 border border-red-300' : 'bg-gray-100 text-gray-400');
+                   btnClass += correct ? 'bg-green-500/20 text-green-300 border border-green-500/50' : 
+                               (isSelected ? 'bg-red-500/20 text-red-300 border border-red-500/50' : 'bg-[#1e293b]/50 text-gray-500 border border-[var(--glass-border)]');
                 } else {
-                  if (isCurrent) btnClass += 'bg-primary-600 text-white shadow-md ring-2 ring-primary-200 ring-offset-1';
-                  else if (isSelected) btnClass += 'bg-primary-100 text-primary-800 border border-primary-300';
-                  else btnClass += 'bg-gray-100 text-gray-600 hover:bg-gray-200';
+                  if (isCurrent) btnClass += 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-[0_0_10px_rgba(16,185,129,0.4)] ring-1 ring-primary-400';
+                  else if (isSelected) btnClass += 'bg-primary-900/40 text-primary-300 border border-primary-500/50';
+                  else btnClass += 'bg-[#1e293b] text-gray-400 border border-[var(--glass-border)] hover:bg-[#334155]';
                 }
 
                 return (
@@ -312,10 +312,10 @@ function Quiz() {
             </div>
             
             {!isSubmitted && (
-              <div className="mt-6 flex flex-col gap-2 text-xs text-gray-500">
-                <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-sm bg-primary-600"></span> Current</div>
-                <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-sm bg-primary-100 border border-primary-300"></span> Answered</div>
-                <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-sm bg-gray-100"></span> Unanswered</div>
+              <div className="mt-6 flex flex-col gap-2 text-xs text-gray-400">
+                <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-sm bg-primary-500 shadow-[0_0_5px_rgba(16,185,129,0.5)]"></span> Current</div>
+                <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-sm bg-primary-900/40 border border-primary-500/50"></span> Answered</div>
+                <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-sm bg-[#1e293b] border border-[var(--glass-border)]"></span> Unanswered</div>
               </div>
             )}
           </div>

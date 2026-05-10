@@ -10,6 +10,7 @@ import notesData from '../data/notes.json';
 import quizData  from '../data/quiz.json';
 import jobsData  from '../data/jobs.json';
 import pyqsData  from '../data/pyqs.json';
+import lecturesData from '../data/lectures.json';
 
 const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://coachinghub.onrender.com/api';
 
@@ -73,6 +74,12 @@ export const getJobs = () => withFallback(
 export const getPYQs = () => withFallback(
   () => api.get('/pyqs'),
   pyqsData
+);
+
+// ─── Lectures API ──────────────────────────────────────────
+export const getLectures = () => withFallback(
+  () => api.get('/lectures'),
+  lecturesData
 );
 
 // ─── Auth API ─────────────────────────────────────────────
@@ -173,5 +180,19 @@ export const createPYQ = async (data) => {
 };
 export const deletePYQ = async (id) => {
   const res = await adminApi.delete(`/pyqs/${id}`);
+  return res.data;
+};
+
+// Lectures Admin API
+export const createLecture = async (data) => {
+  const res = await adminApi.post('/lectures', data);
+  return res.data;
+};
+export const updateLecture = async (id, data) => {
+  const res = await adminApi.put(`/lectures/${id}`, data);
+  return res.data;
+};
+export const deleteLecture = async (id) => {
+  const res = await adminApi.delete(`/lectures/${id}`);
   return res.data;
 };

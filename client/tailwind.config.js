@@ -7,30 +7,37 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // Custom color palette — green agricultural theme
+      // Custom color palette — modern vibrant emerald / teal theme
       colors: {
         primary: {
-          50:  '#f0fdf4',
-          100: '#dcfce7',
-          200: '#bbf7d0',
-          300: '#86efac',
-          400: '#4ade80',
-          500: '#22c55e',
-          600: '#16a34a',
-          700: '#15803d',
-          800: '#166534',
-          900: '#14532d',
+          50:  '#ecfdf5',
+          100: '#d1fae5',
+          200: '#a7f3d0',
+          300: '#6ee7b7',
+          400: '#34d399',
+          500: '#10b981', // Vibrant Emerald
+          600: '#059669',
+          700: '#047857',
+          800: '#065f46',
+          900: '#064e3b',
+          950: '#022c22',
         },
         accent: {
-          light: '#fef08a',   // Yellow - harvest color
-          DEFAULT: '#eab308', // Amber/gold
+          light: '#fde047',   
+          DEFAULT: '#eab308', 
           dark: '#ca8a04',
+        },
+        dark: {
+          DEFAULT: '#0f172a', // Slate 900
+          card: '#1e293b',    // Slate 800
+          text: '#f8fafc',
+          muted: '#94a3b8'
         }
       },
       // Custom fonts
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Outfit', 'sans-serif'],
+        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+        display: ['Space Grotesk', 'sans-serif'],
       },
       // Custom animations
       animation: {
@@ -58,8 +65,9 @@ module.exports = {
         }
       },
       backgroundImage: {
-        'hero-gradient': 'linear-gradient(135deg, #14532d 0%, #166534 30%, #15803d 60%, #16a34a 100%)',
-        'card-gradient': 'linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))',
+        'hero-gradient': 'linear-gradient(135deg, #022c22 0%, #064e3b 30%, #047857 60%, #10b981 100%)',
+        'card-gradient': 'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01))',
+        'glass-gradient': 'linear-gradient(110deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
       }
     },
   },

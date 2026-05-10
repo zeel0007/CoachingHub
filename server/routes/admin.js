@@ -8,6 +8,7 @@ const Quiz = require('../models/Quiz');
 const Job = require('../models/Job');
 const PYQ = require('../models/PYQ');
 const User = require('../models/User');
+const Lecture = require('../models/Lecture');
 
 // ─── Simple Admin Middleware ─────────────────────────────────
 // Since we are not using JWT for this simplified architecture, 
@@ -148,6 +149,36 @@ router.delete('/pyqs/:id', requireAdmin, async (req, res) => {
   try {
     await PYQ.deleteOne({ id: req.params.id });
     res.json({ success: true, message: 'PYQ deleted successfully!' });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+// Add a new Lecture
+router.post('/lectures', requireAdmin, async (req, res) => {
+  try {
+    const lecture = await Lecture.create(req.body);
+    res.status(201).json({ success: true, message: 'Lecture created successfully!', data: lecture });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+// Update a Lecture
+router.put('/lectures/:id', requireAdmin, async (req, res) => {
+  try {
+    const lecture = await Lecture.findOneAndUpdate({ id: req.params.id }, req.body, { new: true });
+    res.json({ success: true, message: 'Lecture updated successfully!', data: lecture });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+// Delete a Lecture
+router.delete('/lectures/:id', requireAdmin, async (req, res) => {
+  try {
+    await Lecture.deleteOne({ id: req.params.id });
+    res.json({ success: true, message: 'Lecture deleted successfully!' });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }

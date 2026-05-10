@@ -47,6 +47,7 @@ const pyqsRouter = require('./routes/pyqs');
 const authRouter = require('./routes/auth');
 const scoresRouter = require('./routes/scores');
 const adminRouter = require('./routes/admin');
+const lecturesRouter = require('./routes/lectures');
 
 app.use('/api/notes', notesRouter);     // GET /api/notes
 app.use('/api/quiz', quizRouter);       // GET /api/quiz
@@ -55,6 +56,7 @@ app.use('/api/pyqs', pyqsRouter);       // GET /api/pyqs
 app.use('/api/auth', authRouter);       // POST /api/auth/login, /api/auth/signup
 app.use('/api/scores', scoresRouter);   // GET/POST /api/scores
 app.use('/api/admin', adminRouter);     // GET/POST/PUT/DELETE /api/admin/*
+app.use('/api/lectures', lecturesRouter); // GET /api/lectures
 
 // ─── Health Check Route ─────────────────────────────────────
 app.get('/api/health', (req, res) => {
