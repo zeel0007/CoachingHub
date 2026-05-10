@@ -102,7 +102,7 @@ const JobsTab = () => {
       </div>
 
       {/* List Section */}
-      <div className="lg:col-span-2 bg-[#1e293b]/50 rounded-lg border border-[var(--glass-border)] overflow-hidden">
+      <div className="lg:col-span-2 bg-[#1e293b]/50 rounded-lg border border-[var(--glass-border)] overflow-x-auto">
         {loading ? <div className="p-8 text-center text-gray-400">Loading jobs...</div> : (
           <table className="w-full text-sm text-left text-gray-300">
             <thead className="bg-[#0f172a] border-b border-[var(--glass-border)] text-gray-400">
